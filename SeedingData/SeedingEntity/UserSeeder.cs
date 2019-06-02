@@ -22,10 +22,10 @@ namespace SeedingData.SeedingEntity
         {
             _context.Users.RemoveRange(_context.Users);
             _context.SaveChanges();
-            this.seed();
+            this.Seed();
             Console.WriteLine("UserSeeder Seeding Done!");
         }
-        public void seed()
+        public void Seed()
         {
             #region configue base url
             client.BaseAddress = new Uri("http://codeforces.com/");

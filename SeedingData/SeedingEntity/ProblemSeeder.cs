@@ -32,10 +32,10 @@ namespace SeedingData.SeedingEntity
             {
                 Console.WriteLine("save changes in ProblemSeeder error, " + ex.Message);
             }
-            this.seed();
+            this.Seed();
             Console.WriteLine("ProblemSeeder Seeding Done!");
         }
-        public void seed()
+        public void Seed()
         {
             #region configue base url
             client.BaseAddress = new Uri("http://codeforces.com/");

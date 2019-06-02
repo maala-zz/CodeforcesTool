@@ -14,10 +14,10 @@ namespace SeedingData.SeedingEntity
         {
             _context.Tags.RemoveRange(_context.Tags);
             _context.SaveChanges();
-            this.seed();
+            this.Seed();
             Console.WriteLine("UserSeeder Seeding Done!");
         }
-        public async void seed()
+        public async void Seed()
         {
             try
             {
