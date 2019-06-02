@@ -23,8 +23,17 @@ namespace SeedingData.SeedingEntity
             _context.Problems.RemoveRange(_context.Problems);
             _context.ProblemTags.RemoveRange(_context.ProblemTags);
             _context.UserProblems.RemoveRange(_context.UserProblems);
+            try
+            {
             _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("save changes in ProblemSeeder error, " + ex.Message);
+            }
             this.seed();
+            Console.WriteLine("ProblemSeeder Seeding Done!");
         }
         public void seed()
         {
@@ -35,7 +44,6 @@ namespace SeedingData.SeedingEntity
                 new MediaTypeWithQualityHeaderValue("application/json"));
             #endregion
             GetAllUsers();
-            Console.WriteLine("ProblemSeeder Seeding Done!");
         }
         public async void GetAllUsers()
         {
@@ -83,14 +91,9 @@ namespace SeedingData.SeedingEntity
                                 UserProblem userProblem = new UserProblem
                                 {
                                     Problem = problem,
-                                    User = user,
-                                    ProblemId = problem.Id,
-                                    UserId = user.Id
+                                    User = user
                                 };
-                                Console.WriteLine(problem.Name + ", " + user.Name +
-                             ", " + problem.Id + ", " + user.Id);
-
-                               _context.UserProblems.Add(userProblem);
+                                _context.UserProblems.Add(userProblem);
                                 foreach (string tag in submission.Problem.tags)
                                 {
                                     Tag t = _context.Tags.FirstOrDefault(tg => tg.Title == tag);

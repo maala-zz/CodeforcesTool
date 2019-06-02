@@ -13,6 +13,7 @@ namespace SeedingData.SeedingEntity
         public TagSeeder()
         {
             _context.Tags.RemoveRange(_context.Tags);
+            _context.SaveChanges();
             this.seed();
             Console.WriteLine("UserSeeder Seeding Done!");
         }

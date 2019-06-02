@@ -21,6 +21,7 @@ namespace SeedingData.SeedingEntity
         public UserSeeder()
         {
             _context.Users.RemoveRange(_context.Users);
+            _context.SaveChanges();
             this.seed();
             Console.WriteLine("UserSeeder Seeding Done!");
         }
@@ -60,7 +61,8 @@ namespace SeedingData.SeedingEntity
                     MaxRank = user.maxRank,
                     Rank = user.Rank,
                     MaxRating = user.maxRating,
-                    Rating = user.Rating
+                    Rating = user.Rating,
+                    Avatar = user.avatar
                 };
                 _context.Users.Add(u);
                 if (_context.SaveChanges() > 0)
