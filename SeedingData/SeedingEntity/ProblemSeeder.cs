@@ -25,7 +25,7 @@ namespace SeedingData.SeedingEntity
             _context.UserProblems.RemoveRange(_context.UserProblems);
             try
             {
-            _context.SaveChanges();
+                _context.SaveChanges();
 
             }
             catch (Exception ex)
@@ -97,10 +97,11 @@ namespace SeedingData.SeedingEntity
                                 foreach (string tag in submission.Problem.tags)
                                 {
                                     Tag t = _context.Tags.FirstOrDefault(tg => tg.Title == tag);
-                                    if (t != null)
-                                    {
-                                        _context.ProblemTags.Add(new ProblemTag { Tag = t, Problem = problem });
-                                    }
+                                    if (t == null)
+                                        _context.Tags.Add(new Tag { Id = Guid.NewGuid(), Title = tag });
+                                    t = _context.Tags.FirstOrDefault(tg => tg.Title == tag);
+                                    _context.ProblemTags.Add(new ProblemTag { Tag = t, Problem = problem });
+
                                 }
                                 if (_context.SaveChanges() > 0)
                                 {
