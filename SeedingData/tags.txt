@@ -1,0 +1,29 @@
+binary search
+combinatorics
+data structures
+two pointers
+math
+sortings
+greedy
+bitmasks
+brute force
+constructive algorithms
+number theory
+implementation
+dp
+graphs
+hashing
+strings
+divide and conquer
+probabilities
+matrices
+trees
+geometry
+dfs and similar
+shortest paths
+dsu
+flows
+graph matchings
+fft
+chinese remainder theorem
+*special
