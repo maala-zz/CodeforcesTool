@@ -1,0 +1,33 @@
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.deps.json
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.json
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.dev.json
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.pdb
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.deps.json
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.json
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.dev.json
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.dll
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csprojResolveAssemblyReference.cache
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csproj.CoreCompileInputs.cache
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfoInputs.cache
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfo.cs
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.dll
+D:\Year 5\graduationProject\CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.pdb
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.deps.json
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.json
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.dev.json
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csprojResolveAssemblyReference.cache
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csproj.CoreCompileInputs.cache
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfoInputs.cache
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfo.cs
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\Daniar\source\repos\__CodeforcesTool-master\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.pdb
