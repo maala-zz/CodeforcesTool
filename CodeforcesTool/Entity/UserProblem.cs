@@ -11,6 +11,6 @@ namespace CodeforcesTool.Entity
         public User User { get; set; }
         public Guid ProblemId { get;set; }
         public Problem Problem { get; set; }
-        public int Rating { get; set; }
+    //    public int Rating { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace SeedingData
         static void Main(string[] args)
         {
             Console.WriteLine("Class Program Start..");
-            UserSeeder userSeeder = new UserSeeder();
-            TagSeeder tagSeeder = new TagSeeder();
+        //    UserSeeder userSeeder = new UserSeeder();
+         //   TagSeeder tagSeeder = new TagSeeder();
             ProblemSeeder problemSeeder = new ProblemSeeder();
             Console.ReadLine();
         }

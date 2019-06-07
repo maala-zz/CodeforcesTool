@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeforcesTool", "Codeforce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeedingData", "SeedingData\SeedingData.csproj", "{3E92AEF4-AEFA-4B86-A56F-DDABD1551582}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProject", "MainProject\MainProject.csproj", "{101AB468-D9F9-48C8-AFA1-5914E24A8CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProject", "MainProject\MainProject.csproj", "{F7E6900B-0046-471B-AF41-B64E99C71C8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{3E92AEF4-AEFA-4B86-A56F-DDABD1551582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E92AEF4-AEFA-4B86-A56F-DDABD1551582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E92AEF4-AEFA-4B86-A56F-DDABD1551582}.Release|Any CPU.Build.0 = Release|Any CPU
-		{101AB468-D9F9-48C8-AFA1-5914E24A8CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{101AB468-D9F9-48C8-AFA1-5914E24A8CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{101AB468-D9F9-48C8-AFA1-5914E24A8CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{101AB468-D9F9-48C8-AFA1-5914E24A8CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E6900B-0046-471B-AF41-B64E99C71C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E6900B-0046-471B-AF41-B64E99C71C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E6900B-0046-471B-AF41-B64E99C71C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E6900B-0046-471B-AF41-B64E99C71C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
