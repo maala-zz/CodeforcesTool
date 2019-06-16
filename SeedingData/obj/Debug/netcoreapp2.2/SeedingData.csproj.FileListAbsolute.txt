@@ -11,3 +11,16 @@ C:\Users\ASUS\source\repos\WebSite1\SeedingData\bin\Debug\netcoreapp2.2\Codeforc
 C:\Users\ASUS\source\repos\WebSite1\SeedingData\bin\Debug\netcoreapp2.2\CodeforcesTool.pdb
 C:\Users\ASUS\source\repos\WebSite1\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.dll
 C:\Users\ASUS\source\repos\WebSite1\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.pdb
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\SeedingData.deps.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\SeedingData.runtimeconfig.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\SeedingData.runtimeconfig.dev.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\SeedingData.dll
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\SeedingData.pdb
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\CodeforcesTool.dll
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\bin\Debug\netcoreapp2.2\CodeforcesTool.pdb
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.csprojResolveAssemblyReference.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.csproj.CoreCompileInputs.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.AssemblyInfoInputs.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.AssemblyInfo.cs
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.dll
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.pdb

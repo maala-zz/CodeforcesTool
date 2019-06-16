@@ -1,6 +1,5 @@
 ﻿using System;
 using CodeforcesTool.Entity;
-using SeedingData;
 using SeedingData.SeedingEntity;
 
 namespace SeedingData
@@ -10,9 +9,9 @@ namespace SeedingData
         static void Main(string[] args)
         {
             Console.WriteLine("Class Program Start..");
-        //    UserSeeder userSeeder = new UserSeeder();
-         //   TagSeeder tagSeeder = new TagSeeder();
-            ProblemSeeder problemSeeder = new ProblemSeeder();
+            UserSeeder userSeeder = new UserSeeder();
+            TagSeeder tagSeeder = new TagSeeder();
+        //    ProblemSeeder problemSeeder = new ProblemSeeder();
             Console.ReadLine();
         }
     }

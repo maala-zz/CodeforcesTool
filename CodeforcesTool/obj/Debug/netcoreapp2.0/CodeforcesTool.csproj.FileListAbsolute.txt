@@ -9,3 +9,14 @@ C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\Codef
 C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb
 C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.dll
 C:\Users\ASUS\source\repos\WebSite1\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.pdb
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csprojResolveAssemblyReference.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.csproj.CoreCompileInputs.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfoInputs.cache
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.AssemblyInfo.cs
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\obj\Debug\netcoreapp2.0\CodeforcesTool.pdb
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.deps.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.runtimeconfig.dev.json
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\CodeforcesTool\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb

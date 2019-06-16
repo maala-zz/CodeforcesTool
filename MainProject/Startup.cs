@@ -10,6 +10,12 @@ using MainProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using MainProject.Services;
+using MainProject.Models.Helpers;
+using CodeforcesTool.Entity;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace MainProject
 {
@@ -26,6 +32,8 @@ namespace MainProject
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration["connectionStrings:AuthDBConnectionString"];
+            var connectionString2 = Configuration["connectionStrings:CodeforcesDBConnectionString"];
+
             services.AddAuthentication(options => {
                 options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -34,8 +42,22 @@ namespace MainProject
                 .AddCookie(options => {
                     options.LoginPath = "/auth/signin";
                 });
+
             services.AddDbContext<AuthContext>(o => o.UseSqlServer(connectionString));
+            services.AddDbContext<CodeforcesContext>(o => o.UseSqlServer(connectionString2));
+
             services.AddScoped<IUserServices, UserServices>();
+            services.AddScoped<IRepository, Repository>();
+
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddScoped<IUrlHelper, UrlHelper>(implementationFactory =>
+                {
+                    var actionContext = implementationFactory.GetService<IActionContextAccessor>().ActionContext;
+                    return new UrlHelper(actionContext);
+                }
+            );
+
+
             services.AddMvc();
         }
 
@@ -49,11 +71,26 @@ namespace MainProject
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                //                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler(appBuilder =>
+               {
+                   appBuilder.Run(async context =>
+                   {
+                       context.Response.StatusCode = 500;
+                       await context.Response.WriteAsync("An unexpected error happend, try again later...");
+
+                   });
+               });
             }
             app.UseAuthentication();
 
             app.UseStaticFiles();
+
+
+//            AutoMapper.Mapper.Initialize(cfg => {
+//                cfg.CreateMap<Problem, ProblemDto>();
+//            });
+
 
             app.UseMvc(routes =>
             {
