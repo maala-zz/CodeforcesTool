@@ -20,3 +20,5 @@ C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\MainProject\ob
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\MainProject\obj\Debug\netcoreapp2.0\MainProject.AssemblyInfo.cs
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\MainProject\obj\Debug\netcoreapp2.0\MainProject.dll
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\MainProject\obj\Debug\netcoreapp2.0\MainProject.pdb
+C:\Users\ASUS\source\repos\WebSite1\MainProject\bin\Debug\netcoreapp2.0\CodeforcesTool.dll
+C:\Users\ASUS\source\repos\WebSite1\MainProject\bin\Debug\netcoreapp2.0\CodeforcesTool.pdb

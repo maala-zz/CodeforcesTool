@@ -28,7 +28,7 @@ namespace MainProject.Controllers
         [Route("signin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(SignInModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(SignInModel model)
         {
             if (ModelState.IsValid)
             {
@@ -36,13 +36,12 @@ namespace MainProject.Controllers
                 if (await _userServices.ValidateCredentials(model.Handle, model.Password, out userDto))
                 {
                     await SignInUser(userDto.Handle);
-                    if (returnUrl != null)
-                        return Redirect(returnUrl);
+                    return new JsonResult(userDto);
                 }
-                return RedirectToAction("Index", "Home");
-
+                else
+                return BadRequest();
             }
-            return RedirectToAction("Index", "Home");
+            return BadRequest();
         }
 
         private async Task SignInUser(string handle)
@@ -64,32 +63,31 @@ namespace MainProject.Controllers
 
         [Route("signup")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Signup(SignUpModel model, string returnUrl = null)
+        public async Task<IActionResult> Signup([FromBody]SignUpModel model)
         {
             User user;
-            //if (ModelState.IsValid)
-            //{
-            //    if( await _userServices.Signup(model,out user))
-            //    {
-            //        await SignInUser(model.Handle);
-            //        Console.WriteLine("user.Id "+ user.Id);
-            //        Console.WriteLine("user.Handle " + user.Handle);
-            //        Console.WriteLine("user.Password " + user.Password);
-            //    }
-            //    else
-            //    {
-            //        return BadRequest();
-            //    }
-            //}
-            await _userServices.Signup(model, out user);
-            Console.WriteLine("user.Id " + user.Id);
-            Console.WriteLine("user.Handle " + user.Handle);
-            Console.WriteLine("user.Password " + user.Password);
-            Console.WriteLine("handle " + model.Handle);
-            Console.WriteLine("password " + model.Password);
-            Console.WriteLine("confirm password " + model.ConfirmPassword);
-            return RedirectToAction("Index", "Home");
+            if (ModelState.IsValid)
+            {
+                if (await _userServices.Signup(model, out user))
+                {
+                    await SignInUser(model.Handle);
+                    return Ok(user);
+                }
+                else
+                {
+                    return new NotFoundResult();
+                }
+            }
+                return BadRequest();
+            
+            //await _userServices.Signup(model, out user);
+            //Console.WriteLine("user.Id " + user.Id);
+            //Console.WriteLine("user.Handle " + user.Handle);
+            //Console.WriteLine("user.Password " + user.Password);
+            //Console.WriteLine("handle " + model.Handle);
+            //Console.WriteLine("password " + model.Password);
+            //Console.WriteLine("confirm password " + model.ConfirmPassword);
+            //return RedirectToAction("Index", "Home");
         }
     }
 }

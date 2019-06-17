@@ -44,7 +44,6 @@ namespace MainProject
                 });
 
             services.AddDbContext<AuthContext>(o => o.UseSqlServer(connectionString));
-            services.AddDbContext<CodeforcesContext>(o => o.UseSqlServer(connectionString2));
 
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRepository, Repository>();
