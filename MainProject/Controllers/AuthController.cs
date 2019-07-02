@@ -19,16 +19,10 @@ namespace MainProject.Controllers
         {
             this._userServices = userServices;
         }
-        [Route("signin")]
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return View();
-        }
+
         [Route("signin")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(SignInModel model)
+        public async Task<IActionResult> Login([FromBody]SignInModel model)
         {
             if (ModelState.IsValid)
             {
@@ -39,7 +33,7 @@ namespace MainProject.Controllers
                     return new JsonResult(userDto);
                 }
                 else
-                return BadRequest();
+                return NotFound();
             }
             return BadRequest();
         }
@@ -56,12 +50,6 @@ namespace MainProject.Controllers
         }
 
         [Route("signup")]
-        public IActionResult Signup()
-        {
-            return View();
-        }
-
-        [Route("signup")]
         [HttpPost]
         public async Task<IActionResult> Signup([FromBody]SignUpModel model)
         {
@@ -75,7 +63,7 @@ namespace MainProject.Controllers
                 }
                 else
                 {
-                    return new NotFoundResult();
+                    return StatusCode(403);
                 }
             }
                 return BadRequest();

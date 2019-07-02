@@ -9,12 +9,7 @@ namespace MainProject.Services
 {
     public class Repository : IRepository
     {
-        private CodeforcesContext _context;
-
-        public Repository(CodeforcesContext context)
-        {
-            _context = context;
-        }
+        private CodeforcesContext _context = new CodeforcesContext();
 
         public PagedList<Problem> GetProblems(HomePageParameters homePageParameters)
         {
@@ -61,15 +56,21 @@ namespace MainProject.Services
 
         public ICollection<ProblemDto> toDto(ICollection<Problem> problems) {
             var result = new List<ProblemDto>();
-
-            foreach(var problem in problems)
+            var tags = new List<string>();
+            tags.Add("tag1");
+            tags.Add("tag2");
+            tags.Add("tag3");
+            foreach (var problem in problems)
             {
                 result.Add(new ProblemDto()
                 {
                     Id = problem.Id,
                     Name = problem.Name,
                     Rating = problem.Rating,
-                    Solved = false
+                    Solved = false,
+                    Index = problem.Index,
+                    Link = problem.Link,
+                    Tags = tags 
                 }
                 );
 

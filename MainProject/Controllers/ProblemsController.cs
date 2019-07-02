@@ -63,7 +63,7 @@ namespace MainProject.Controllers
                 }
             }
 
-            return Ok(problems);
+            return Ok(new { problems, pagedList= paginationMetaData.totalCount });
         }
 
         private string CreateProblemsResourceUri(HomePageParameters homePageParameters,ResourceUriType type)

@@ -43,7 +43,20 @@ namespace MainProject
                     options.LoginPath = "/auth/signin";
                 });
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                builder =>
+                {
+                    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+                });
+            });
+
+
             services.AddDbContext<AuthContext>(o => o.UseSqlServer(connectionString));
+
+
 
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRepository, Repository>();
@@ -81,6 +94,7 @@ namespace MainProject
                    });
                });
             }
+            app.UseCors("AllowMyOrigin");
             app.UseAuthentication();
 
             app.UseStaticFiles();

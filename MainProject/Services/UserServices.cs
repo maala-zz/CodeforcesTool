@@ -31,14 +31,14 @@ namespace MainProject.Services
                     Task.FromResult(false);
             }
             return Task.FromResult(false);
-          
+
         }
 
         public Task<bool> ValidateCredentials(string handle, string password, out UserDto userDto)
         {
             userDto = null;
             User user = _context.Users.FirstOrDefault(u => u.Handle == handle && u.Password == password);
-            if( user == null )
+            if (user == null)
             {
                 return Task.FromResult(false);
             }
