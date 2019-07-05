@@ -107,16 +107,19 @@ namespace MainProject.Controllers
         [HttpGet("rec/{userId}")]
         public IActionResult GetUserCorr(Guid userId)
         {
-            var sugs = recRepo.GetUserSug(userId);
+            var sugs = recRepo.GetUserFriendSug(userId);
             return Ok(sugs);
         }
 
 
-        [HttpGet("test")]
-        public IActionResult GetUser()
+        [HttpGet("rec/problems/{userId}")]
+        public IActionResult GetUser(Guid userId)
         {
-            var user = repo.GetUser("Daniar");
-            return Ok(user);
+
+            var problems =  recRepo.GetUserProblemSug(userId);
+
+            return Ok(problems);
+
         }
     }
 }

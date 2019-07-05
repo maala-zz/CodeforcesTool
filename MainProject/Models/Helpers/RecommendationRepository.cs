@@ -84,11 +84,79 @@ namespace MainProject.Models.Helpers
             }
         }
 
-        public List<Correlation> GetUserSug(Guid userId)
+        public void CalculateUsersProblemsCorrelation()
+        {
+            _context.UserCorrelation.RemoveRange(_context.UserCorrelation);
+            _context.SaveChanges();
+
+            var users = _context.Users.ToList();
+            for (int i = 0; i < users.Count(); ++i)
+            {
+                var user = users[i];
+                var problems = _context.Problems.
+                        Where(pr => pr.UserProblems.Any(up => up.UserId == user.Id)).ToList();
+                for (int j = 0; j < problems.Count(); ++j)
+                {
+                    var problem = problems[j];
+                    var tags = _context.ProblemTags.Where(pt => pt.ProblemId == problem.Id).ToList();
+                    for (int k = 0; k < tags.Count(); ++k)
+                    {
+                        var tag = _context.Tags.Where(t => t.Id == tags[k].TagId).SingleOrDefault();
+                        var record = _context.UseTagRating.Where(ut => ut.UserId == user.Id
+                                              && ut.TagId == tag.Id).SingleOrDefault();
+                        if (record == null)
+                        {
+                            record = new UseTagRating { Id = Guid.NewGuid(), UserId = user.Id, TagId = tag.Id, Rating = 1 };
+                            _context.UseTagRating.Add(record);
+                            _context.SaveChanges();
+                        }
+                        else
+                        {
+                            record.Rating += 1;
+                            _context.SaveChanges();
+                        }
+                        Console.WriteLine("user " + user.Handle + " tag " + tag.Title);
+                    }
+                }
+            }
+        }
+
+        public List<Correlation> GetUserFriendSug(Guid userId)
         {
             var res = _context.UserCorrelation.Where(corr => corr.User2Id == userId || corr.UserId == userId).OrderByDescending(corr => corr.Value).ToList();
             Console.WriteLine(res.Count());
             return res;
+        }
+
+        public List<Problem> GetUserProblemSug(Guid userId)
+        {
+            List<Problem> items = new List<Problem>();
+            var res = _context.Problems.Where(p => 1 == 1).ToList();
+            for (int i = 0; i < res.Count(); ++i)
+            {
+                var problem = res[i];
+                var tags = _context.ProblemTags.Where(pt => pt.ProblemId == problem.Id).ToList();
+                var ExcpectedRating = 0;
+                for (int j = 0; j < tags.Count(); ++j)
+                {
+                    var tag = tags[j];
+                    var record = _context.UseTagRating.
+                        Where(utr => utr.TagId == tag.TagId && utr.UserId == userId).SingleOrDefault();
+                    if (record != null)
+                        ExcpectedRating += record.Rating;
+                }
+                if (ExcpectedRating != 0)
+                {
+                    if( items.Count() < 30 )
+                    items.Add(problem);
+                }
+            }
+
+            for (int i = 0; i < items.Count(); ++i)
+            {
+                Console.WriteLine(items[i].Name);
+            }
+            return items;
         }
     }
 }

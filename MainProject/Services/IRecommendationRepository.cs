@@ -10,6 +10,8 @@ namespace MainProject.Services
     public interface IRecommendationRepository
     {
         void CalculateUsersCorrelation();
-        List<Correlation> GetUserSug(Guid userId);
+        void CalculateUsersProblemsCorrelation();
+        List<Correlation> GetUserFriendSug(Guid userId);
+        List<Problem> GetUserProblemSug(Guid userId);
     }
 }

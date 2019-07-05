@@ -123,6 +123,8 @@ namespace CodeforcesTool.Migrations
 
                     b.Property<Guid>("ProblemId");
 
+                    b.Property<int>("ExcpectedRating");
+
                     b.Property<double>("Rating");
 
                     b.HasKey("UserId", "ProblemId");
@@ -130,6 +132,22 @@ namespace CodeforcesTool.Migrations
                     b.HasIndex("ProblemId");
 
                     b.ToTable("UserProblems");
+                });
+
+            modelBuilder.Entity("CodeforcesTool.Entity.UseTagRating", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Rating");
+
+                    b.Property<Guid>("TagId");
+
+                    b.Property<Guid>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UseTagRating");
                 });
 
             modelBuilder.Entity("CodeforcesTool.Entity.ProblemTag", b =>

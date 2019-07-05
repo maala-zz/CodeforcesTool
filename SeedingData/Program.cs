@@ -14,7 +14,8 @@ namespace SeedingData
             //TagSeeder tagSeeder = new TagSeeder();
             //       ProblemSeeder problemSeeder = new ProblemSeeder();
             RecommendationRepository rec = new RecommendationRepository();
-            rec.CalculateUsersCorrelation();
+            var list = rec.GetUserProblemSug(new Guid("d71ec257-97da-40e0-b400-092651c2bbac"));
+
             Console.ReadLine();
         }
     }
