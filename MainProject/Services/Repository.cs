@@ -57,11 +57,14 @@ namespace MainProject.Services
         public ICollection<ProblemDto> toDto(ICollection<Problem> problems) {
             var result = new List<ProblemDto>();
             var tags = new List<string>();
-            tags.Add("tag1");
-            tags.Add("tag2");
-            tags.Add("tag3");
+
             foreach (var problem in problems)
             {
+                if(problem.ProblemTags != null)
+                foreach(var tag in problem.ProblemTags)
+                {
+                    tags.Add(tag.Tag.Title);
+                }
                 result.Add(new ProblemDto()
                 {
                     Id = problem.Id,

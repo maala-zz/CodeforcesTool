@@ -17,5 +17,6 @@ namespace CodeforcesTool.Entity
         public string MaxRank { get; set; }
         public int MaxRating { get; set; }
         public ICollection<UserProblem> UserProblems { get; set; }
+
     }
 }

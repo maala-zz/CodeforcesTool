@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CodeforcesTool\CodeforcesTool.csproj" />
+    <ProjectReference Include="..\MainProject\MainProject.csproj" />
   </ItemGroup>
 
 </Project>

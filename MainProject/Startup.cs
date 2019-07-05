@@ -60,7 +60,7 @@ namespace MainProject
 
             services.AddScoped<IUserServices, UserServices>();
             services.AddScoped<IRepository, Repository>();
-
+            services.AddScoped<IRecommendationRepository, RecommendationRepository>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper, UrlHelper>(implementationFactory =>
                 {

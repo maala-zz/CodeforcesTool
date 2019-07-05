@@ -20,6 +20,34 @@ namespace CodeforcesTool.Migrations
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CodeforcesTool.Entity.Correlation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("FirstUserAvatar");
+
+                    b.Property<string>("FirstUserHandle");
+
+                    b.Property<string>("FirstUserRating");
+
+                    b.Property<string>("SecondUserAvatar");
+
+                    b.Property<string>("SecondUserHandle");
+
+                    b.Property<string>("SecondUserRating");
+
+                    b.Property<Guid>("User2Id");
+
+                    b.Property<Guid>("UserId");
+
+                    b.Property<double>("Value");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserCorrelation");
+                });
+
             modelBuilder.Entity("CodeforcesTool.Entity.Problem", b =>
                 {
                     b.Property<Guid>("Id")
@@ -94,6 +122,8 @@ namespace CodeforcesTool.Migrations
                     b.Property<Guid>("UserId");
 
                     b.Property<Guid>("ProblemId");
+
+                    b.Property<double>("Rating");
 
                     b.HasKey("UserId", "ProblemId");
 

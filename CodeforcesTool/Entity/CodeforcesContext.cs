@@ -13,6 +13,7 @@ namespace CodeforcesTool.Entity
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProblemTag> ProblemTags { get; set; }
         public DbSet<UserProblem> UserProblems { get; set; }
+       public DbSet<Correlation> UserCorrelation { get; set; }
         //public CodeforcesContext(DbContextOptions<CodeforcesContext> dbContextOptions)
         //    : base(dbContextOptions) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

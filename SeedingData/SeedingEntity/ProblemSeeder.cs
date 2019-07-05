@@ -88,10 +88,13 @@ namespace SeedingData.SeedingEntity
                                     Rating = rating,
                                 };
                                 _context.Problems.Add(problem);
+                                Random random = new Random();
+                                double value =  random.NextDouble() * (5.0 - 1.0) + 1.0;
                                 UserProblem userProblem = new UserProblem
                                 {
                                     Problem = problem,
-                                    User = user
+                                    User = user,
+                                    Rating = value
                                 };
                                 _context.UserProblems.Add(userProblem);
                                 foreach (string tag in submission.Problem.tags)

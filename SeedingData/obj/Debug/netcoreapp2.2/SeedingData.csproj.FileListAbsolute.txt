@@ -24,3 +24,5 @@ C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\ob
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.AssemblyInfo.cs
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.dll
 C:\Users\Daniar\source\repos\CodeforcesTool-master\CodeforcesTool\SeedingData\obj\Debug\netcoreapp2.2\SeedingData.pdb
+C:\Users\ASUS\source\repos\WebSite1\SeedingData\bin\Debug\netcoreapp2.2\MainProject.dll
+C:\Users\ASUS\source\repos\WebSite1\SeedingData\bin\Debug\netcoreapp2.2\MainProject.pdb

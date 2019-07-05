@@ -15,12 +15,14 @@ namespace MainProject.Controllers
     public class ProblemsController : Controller
     {
         private readonly IRepository repo;
+        private readonly IRecommendationRepository recRepo;
         private readonly IUrlHelper urlHelper;
 
-        public ProblemsController(IRepository _repo,IUrlHelper _url)
+        public ProblemsController(IRepository _repo,IUrlHelper _url, IRecommendationRepository rec)
         {
             repo = _repo;
             urlHelper = _url;
+            recRepo = rec;
         }
 
         [HttpGet(Name ="GetProblems")]
@@ -100,6 +102,13 @@ namespace MainProject.Controllers
                     });
 
             }
+        }
+
+        [HttpGet("rec/{userId}")]
+        public IActionResult GetUserCorr(Guid userId)
+        {
+            var sugs = recRepo.GetUserSug(userId);
+            return Ok(sugs);
         }
 
 
