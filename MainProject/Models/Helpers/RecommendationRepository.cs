@@ -128,9 +128,9 @@ namespace MainProject.Models.Helpers
             return res;
         }
 
-        public List<Problem> GetUserProblemSug(Guid userId)
+        public List<ProblemDto> GetUserProblemSug(Guid userId)
         {
-            List<Problem> items = new List<Problem>();
+            List<ProblemDto> items = new List<ProblemDto>();
             var res = _context.Problems.Where(p => 1 == 1).ToList();
             for (int i = 0; i < res.Count(); ++i)
             {
@@ -147,15 +147,16 @@ namespace MainProject.Models.Helpers
                 }
                 if (ExcpectedRating != 0)
                 {
-                    if( items.Count() < 30 )
-                    items.Add(problem);
+                    if (items.Count() < 10)
+                        items.Add(new ProblemDto {
+                             Name = problem.Name,
+                             Rating = problem.Rating,
+                             Index = problem.Index,
+                             Link = problem.Link
+                        });
                 }
             }
 
-            for (int i = 0; i < items.Count(); ++i)
-            {
-                Console.WriteLine(items[i].Name);
-            }
             return items;
         }
     }

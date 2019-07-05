@@ -12,6 +12,6 @@ namespace MainProject.Services
         void CalculateUsersCorrelation();
         void CalculateUsersProblemsCorrelation();
         List<Correlation> GetUserFriendSug(Guid userId);
-        List<Problem> GetUserProblemSug(Guid userId);
+        List<ProblemDto> GetUserProblemSug(Guid userId);
     }
 }
